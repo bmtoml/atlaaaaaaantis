@@ -14,7 +14,7 @@ resource "aws_vpc" "boop3" {
 }
 
 resource "aws_vpc" "johnholm" {
-  count = 0
+  count = 1
   cidr_block = "192.127.129.0/24"
 }
 
