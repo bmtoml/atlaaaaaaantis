@@ -20,18 +20,9 @@ resource "aws_vpc" "johnholm" {
 
 
 
-resource "aws_s3_bucket" "test2" {
-  bucket = "atlantis-poc-test-2"
-  acl = "private"
-  tags = {
-    Name = "test atlantis poc bucket"
-    Environment = "voliatile"
-  }
-}
-
-
 
 resource "aws_s3_bucket" "test3" {
+  count = 0
   bucket = "atlantis-poc-test-3"
   acl = "private"
   tags = {
