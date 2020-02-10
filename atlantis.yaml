@@ -1,0 +1,23 @@
+# This will run terraform fmt check on pull requests before planning
+# Requires atlantis >= 0.4.15
+
+version: 2
+automerge: true
+projects:
+  - name: default
+    dir: .
+    workspace: default
+    terraform_version: v0.11.11
+    apply_requirements: [mergeable, approved]
+    workflow: default 
+workflows:
+  default:
+    plan:
+      steps:
+        - run: terraform fmt -check=true -diff=true -write=false
+        - init
+        - plan
+    apply:
+      steps:
+        - apply
+
