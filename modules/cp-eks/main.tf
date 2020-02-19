@@ -88,7 +88,7 @@ module "eks_cluster" {
   subnet_ids = module.subnets.public_subnet_ids
   region     = var.region
   #required for atlantis
-  install_aws_cli = true
+  install_aws_cli = false
   install_kubectl = false
   external_packages_install_path = "~/.terraform/"
   configmap_auth_file = "~/.terraform/configmap-auth.yaml"
