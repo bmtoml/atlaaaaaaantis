@@ -90,7 +90,7 @@ module "eks_cluster" {
   #required for atlantis
   install_aws_cli = true
   install_kubectl = false
-  external_packages_install_path = "~/.terraform/bin"
+  external_packages_install_path = "~/.terraform/"
   configmap_auth_file = "~/.terraform/configmap-auth.yaml"
   #/required for atlantis
 
