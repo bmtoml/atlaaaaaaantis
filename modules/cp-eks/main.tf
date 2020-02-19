@@ -91,7 +91,7 @@ module "eks_cluster" {
   install_aws_cli = false
   install_kubectl = false
   external_packages_install_path = "~/.terraform/"
-  configmap_auth_file = "~/.terraform/configmap-auth.yaml"
+  configmap_auth_file = ".terraform/configmap-auth.yaml"
   #/required for atlantis
 
   kubernetes_version = var.kubernetes_version
