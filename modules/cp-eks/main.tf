@@ -95,7 +95,7 @@ module "eks_cluster" {
   #/required for atlantis
 
   kubernetes_version = var.kubernetes_version
-  kubeconfig_path    = var.kubeconfig_path
+  kubeconfig_path    = "${var.kubeconfig_path}-${var.namespace}-${var.name}"
 
   oidc_provider_enabled = false
 
