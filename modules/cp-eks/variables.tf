@@ -24,7 +24,7 @@ variable "tags" {
 }
 variable "kubeconfig_path" {
   type    = string
-  default = "/opt"
+  default = "/opt/kubeconfig-${var.name}"
 }
 variable "kubernetes_version" {
   type    = string
