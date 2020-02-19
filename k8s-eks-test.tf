@@ -3,6 +3,6 @@ module "test-k8s-cluster" {
   namespace = "bemit"
   stage     = "testing"
   region    = "eu-west-1"
-  name      = "test-k8s-cluster"
+  name      = "johnholm"
   tags      = {}
 }
