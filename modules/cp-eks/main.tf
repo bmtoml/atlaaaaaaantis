@@ -87,6 +87,12 @@ module "eks_cluster" {
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.subnets.public_subnet_ids
   region     = var.region
+  #required for atlantis
+  install_aws_cli = true
+  install_kubectl = true
+  external_packages_install_path = "~/.terraform/bin"
+  configmap_auth_file = "~/.terraform/configmap-auth.yaml"
+  #/required for atlantis
 
   kubernetes_version = var.kubernetes_version
   kubeconfig_path    = var.kubeconfig_path
