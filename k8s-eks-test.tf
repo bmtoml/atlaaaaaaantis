@@ -5,7 +5,7 @@ module "test-k8s-cluster" {
   region    = "eu-west-1"
   name      = "johnholm"
   tags      = {}
-  providers {
+  providers = {
     aws = "aws"
   }
 
