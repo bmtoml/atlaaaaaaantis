@@ -26,10 +26,6 @@ variable "kubeconfig_path" {
   type    = string
   default = "/opt/kubeconfig"
 }
-variable "kubernetes_version" {
-  type    = string
-  default = ""
-}
 variable "autoscaling_policies_enabled" {
   type    = bool
   default = false
