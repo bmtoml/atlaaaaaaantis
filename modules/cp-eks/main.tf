@@ -99,3 +99,9 @@ module "eks_cluster" {
   workers_security_group_ids = [module.eks_workers.security_group_id]
   workers_role_arns          = [module.eks_workers.workers_role_arn]
 }
+
+variable "kubernetes_version" {
+  type    = string
+  default = ""
+}
+
