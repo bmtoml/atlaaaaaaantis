@@ -92,10 +92,16 @@ module "eks_cluster" {
   #/required for atlantis
 
   kubernetes_version = var.kubernetes_version
-  kubeconfig_path    = "${var.namespace}-${var.name}.kubeconfig"
+  kubeconfig_path    = "${var.namespace}-${var.stage}-${var.name}.kubeconfig"
 
   oidc_provider_enabled = false
 
   workers_security_group_ids = [module.eks_workers.security_group_id]
   workers_role_arns          = [module.eks_workers.workers_role_arn]
 }
+
+variable "kubernetes_version" {
+  type    = string
+  default = ""
+}
+
